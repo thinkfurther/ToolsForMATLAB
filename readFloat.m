@@ -3,7 +3,7 @@ function [output] = readFloat(filename, arrayShape)
      	error('File does not exist');
     end
     fid = fopen(filename,'rb');
-    temp = fread(fid,'float');
+    temp = fread(fid,'float=>float');
     fclose(fid);
     if nargin == 1
         output = temp;
