@@ -12,6 +12,7 @@ function [output] = readFloat(filename, arrayShape)
     try
         output = reshape(temp, arrayShape);
     catch
-       error('Shape does not match the file');
+        output = temp;
+        error('Shape does not match the file');
     end 
 end
